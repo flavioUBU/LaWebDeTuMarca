@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="650" viewBox="0 0 900 650">
+    <defs>
+        <style>
+            .bg-layer { fill: #0F172A; }
+            .brand-main { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 42px; fill: #38BDF8; letter-spacing: -0.5px; }
+            .brand-accent { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 42px; fill: #FB923C; letter-spacing: -0.5px; }
+            .brand-sub { font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 13px; fill: #94A3B8; letter-spacing: 7px; }
+            .glow-cyan { filter: drop-shadow(0px 0px 8px rgba(56, 189, 248, 0.6)); }
+            .glow-orange { filter: drop-shadow(0px 0px 8px rgba(251, 146, 60, 0.6)); }
+        </style>
+
+        <linearGradient id="cyan-neon-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#38BDF8" />
+            <stop offset="100%" stop-color="#0284C7" />
+        </linearGradient>
+
+        <linearGradient id="blue-neon-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#0284C7" />
+            <stop offset="100%" stop-color="#0369A1" />
+        </linearGradient>
+
+        <linearGradient id="orange-neon-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#FB923C" />
+            <stop offset="100%" stop-color="#EA580C" />
+        </linearGradient>
+
+        <filter id="shadow-dark" x="-20%" y="-20%" width="140%" height="140%">
+            <feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="#000000" flood-opacity="0.5" />
+        </filter>
+    </defs>
+
+    <!-- CAPA 1: FONDO MODO OSCURO -->
+    <g id="Capa_1_Fondo_Oscuro">
+        <rect class="bg-layer" width="900" height="650" />
+    </g>
+
+    <!-- CAPA 2: ISOTIPO -->
+    <g id="Capa_2_Isotipo_Oscuro" filter="url(#shadow-dark)">
+        <path id="w_trazo_izquierdo_cyan" class="glow-cyan" d="M 280 150 L 370 340 L 400 340 L 310 150 Z" fill="url(#cyan-neon-gradient)" />
+        <path id="w_trazo_centro_subida_blue" d="M 370 340 L 440 190 L 468 190 L 398 340 Z" fill="url(#blue-neon-gradient)" />
+        <path id="w_trazo_centro_bajada_blue" d="M 440 190 L 510 340 L 538 340 L 468 190 Z" fill="url(#blue-neon-gradient)" opacity="0.9" />
+        <path id="w_trazo_derecho_naranja_principal" class="glow-orange" d="M 510 340 L 600 150 L 628 150 L 538 340 Z" fill="url(#orange-neon-gradient)" />
+        <path id="w_trazo_derecho_naranja_paralela" class="glow-orange" d="M 550 340 L 632 165 L 648 165 L 566 340 Z" fill="url(#orange-neon-gradient)" opacity="0.85" />
+    </g>
+
+    <!-- CAPA 3: TEXTO PRINCIPAL -->
+    <g id="Capa_3_Nombre_Marca_Oscuro">
+        <text x="450" y="445" text-anchor="middle">
+            <tspan class="brand-main">LAWEBDE</tspan><tspan class="brand-accent">TUMARCA</tspan>
+        </text>
+    </g>
+
+    <!-- CAPA 4: SUBTÍTULO -->
+    <g id="Capa_4_Subtitulo_Oscuro">
+        <text x="454" y="485" class="brand-sub" text-anchor="middle">SOLUCIONES DIGITALES &amp; BRANDING</text>
+    </g>
+</svg>

@@ -1,0 +1,590 @@
+/* ==========================================================================
+   1. RESET Y VARIABLES
+   ========================================================================== */
+:root {
+    --bg-dark: #0b1120;
+    --bg-card: #1e293b;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --accent-orange: #f97316;
+    --accent-blue: #38bdf8;
+    --border-color: rgba(255, 255, 255, 0.1);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.5;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ==========================================================================
+   2. NAVBAR
+   ========================================================================== */
+.navbar {
+    background-color: rgba(11, 17, 32, 0.95);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--border-color);
+    padding: 0.75rem 0;
+    width: 100%;
+}
+
+.nav-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.logo-img {
+    height: 36px;
+    width: auto;
+}
+
+nav {
+    display: flex;
+    gap: 1.25rem;
+    align-items: center;
+}
+
+nav a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: var(--text-main);
+}
+
+/* BOTONES */
+.btn {
+    display: inline-block;
+    padding: 0.65rem 1.25rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.btn-primary {
+    background-color: var(--accent-orange);
+    color: #ffffff !important;
+}
+
+.btn-primary:hover {
+    background-color: #ea580c;
+}
+
+.btn-secondary {
+    background-color: var(--bg-card);
+    color: var(--text-main) !important;
+    border: 1px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+    background-color: #334155;
+}
+
+.full-width {
+    width: 100%;
+    display: block;
+}
+
+.btn-lg {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+}
+
+/* ==========================================================================
+   3. HERO SECTION
+   ========================================================================== */
+.hero {
+    padding: 3rem 0;
+    width: 100%;
+}
+
+.hero-grid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.hero-text-col {
+    flex: 1;
+    min-width: 0;
+}
+
+.hero-img-col {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.pill {
+    background: rgba(249, 115, 22, 0.15);
+    color: var(--accent-orange);
+    padding: 0.35rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 0.75rem;
+    max-width: 100%;
+    word-break: break-word;
+}
+
+.hero h1 {
+    font-size: 2.2rem;
+    line-height: 1.25;
+    margin-bottom: 1rem;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.hero p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.hero-btns {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.hero-image-wrapper {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    width: 100%;
+    max-width: 480px;
+}
+
+.hero-image-wrapper img {
+    width: 100%;
+    height: auto;
+    max-height: 420px;
+    object-fit: contain;
+    display: block;
+    background-color: var(--bg-card);
+}
+
+.floating-badge {
+    position: absolute;
+    bottom: 0.75rem;
+    left: 0.75rem;
+    background: rgba(15, 23, 42, 0.9);
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid var(--border-color);
+    z-index: 2;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background-color: #22c55e;
+    border-radius: 50%;
+}
+
+/* ==========================================================================
+   4. SECCIONES Y FONDOS DE IMAGEN
+   ========================================================================== */
+.about-section, .pricing-section {
+    padding: 3.5rem 0;
+    border-top: 1px solid var(--border-color);
+    position: relative;
+}
+
+/* Fondo para "Tu negocio merece una web a la altura" */
+.about-section-bg {
+    background: linear-gradient(rgba(11, 17, 32, 0.88), rgba(11, 17, 32, 0.92)),
+    url('/images/hero-bar.jpg') center/cover no-repeat;
+}
+
+/* Fondo para "¿Qué diferencia a cada plan?" */
+.comparativa-section-bg {
+    background: linear-gradient(rgba(11, 17, 32, 0.88), rgba(11, 17, 32, 0.92)),
+    url('/images/comparativaFondo.jpg') center/cover no-repeat;
+}
+
+.about-header, .pricing-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    margin-top: 0.5rem;
+    overflow-wrap: break-word;
+}
+
+.section-subtitle {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    max-width: 600px;
+    margin: 0.5rem auto 0;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.25rem;
+}
+
+.about-card {
+    padding: 1.5rem;
+    border-radius: 12px;
+    background: rgba(30, 41, 59, 0.75);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--border-color);
+}
+
+.card-icon {
+    font-size: 1.8rem;
+    margin-bottom: 0.75rem;
+}
+
+/* TARIFAS */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+    align-items: stretch;
+}
+
+.card {
+    background-color: var(--bg-card);
+    border-radius: 14px;
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.pricing-card-featured {
+    border: 2px solid var(--accent-orange);
+}
+
+.card-image-header {
+    position: relative;
+    height: 160px;
+}
+
+.card-image-header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-tag {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    background: rgba(15, 23, 42, 0.85);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+.tag-featured {
+    background: var(--accent-orange);
+}
+
+.card-body {
+    padding: 1.25rem;
+    flex-grow: 1;
+}
+
+.price-box {
+    margin-top: 1rem;
+    padding: 0.85rem;
+    background-color: rgba(15, 23, 42, 0.6);
+    border-radius: 8px;
+}
+
+.price-amount {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.features-list {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.features-list li {
+    padding: 0.4rem 0;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.card-footer {
+    padding: 1.25rem;
+}
+
+/* ==========================================================================
+   5. COMPARATIVA POR APARTADOS (DESGLOSE CLARO DE PLANES)
+   ========================================================================== */
+.plans-comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+    align-items: stretch;
+}
+
+.plan-detail-card {
+    background-color: rgba(30, 41, 59, 0.85);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.featured-detail-card {
+    border: 1px solid rgba(249, 115, 22, 0.6);
+    background-color: rgba(30, 41, 59, 0.92);
+}
+
+.plan-badge {
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 12px;
+    display: inline-block;
+    margin-bottom: 0.75rem;
+}
+
+.badge-basic {
+    background-color: rgba(148, 163, 184, 0.2);
+    color: var(--text-muted);
+}
+
+.badge-impulso {
+    background-color: rgba(249, 115, 22, 0.2);
+    color: var(--accent-orange);
+}
+
+.plan-detail-header h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+}
+
+.plan-target {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    background-color: rgba(15, 23, 42, 0.6);
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.25rem;
+    border-left: 3px solid var(--accent-orange);
+    line-height: 1.4;
+}
+
+.check-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.check-list li {
+    font-size: 0.88rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    line-height: 1.4;
+}
+
+.check-list li.included span {
+    color: #22c55e;
+    font-weight: bold;
+}
+
+.check-list li.excluded {
+    color: rgba(148, 163, 184, 0.5);
+}
+
+.check-list li.excluded span {
+    color: #ef4444;
+    font-weight: bold;
+}
+
+/* ==========================================================================
+   6. FORMULARIO Y FOOTER
+   ========================================================================== */
+.contact-section {
+    padding: 3.5rem 0;
+    text-align: center;
+}
+
+.contact-section .section-title,
+.contact-section .section-subtitle {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form {
+    max-width: 550px;
+    width: 100%;
+    margin: 1.5rem auto 0;
+    background-color: var(--bg-card);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    text-align: left;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+}
+
+footer {
+    border-top: 1px solid var(--border-color);
+    padding: 1.5rem 0;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+}
+
+/* ==========================================================================
+   7. REGLAS RESPONSIVE (MÓVIL)
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+
+    .nav-flex {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 0.75rem !important;
+    }
+
+    nav {
+        flex-direction: column !important;
+        width: 100% !important;
+        gap: 0.4rem !important;
+    }
+
+    nav a {
+        width: 100% !important;
+        text-align: center !important;
+        padding: 0.35rem 0 !important;
+        font-size: 0.85rem !important;
+        white-space: normal !important;
+        word-break: break-word !important;
+    }
+
+    .nav-btn {
+        width: 100% !important;
+        max-width: 280px !important;
+        margin-top: 0.25rem !important;
+    }
+
+    .hero {
+        padding: 1.5rem 0;
+    }
+
+    .hero-grid {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .hero-text-col,
+    .hero-img-col {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 1.45rem;
+        line-height: 1.3;
+    }
+
+    .hero p {
+        font-size: 0.88rem;
+    }
+
+    .hero-btns {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-btns .btn {
+        width: 100%;
+    }
+
+    .section-title {
+        font-size: 1.35rem;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .plans-comparison-grid {
+        grid-template-columns: 1fr;
+    }
+
+    form {
+        padding: 1rem;
+    }
+}

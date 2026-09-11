@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 160" width="100%" height="100%">
+  <defs>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#0284C7" />
+    </linearGradient>
+
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FB923C" />
+      <stop offset="100%" stop-color="#EA580C" />
+    </linearGradient>
+
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- ISOTIPO W A LA IZQUIERDA -->
+  <g filter="url(#glow)" transform="translate(-10, -35) scale(0.38)">
+    <path d="M 220 210 L 320 450 L 380 310" fill="none" stroke="url(#blueGrad)" stroke-width="44" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 380 310 L 440 450" fill="none" stroke="url(#blueGrad)" stroke-width="36" stroke-linecap="round" opacity="0.85" />
+    <path d="M 440 450 L 540 210" fill="none" stroke="url(#orangeGrad)" stroke-width="44" stroke-linecap="round" />
+    <path d="M 500 450 L 580 260" fill="none" stroke="url(#orangeGrad)" stroke-width="22" stroke-linecap="round" opacity="0.9" />
+  </g>
+
+  <!-- TEXTO A LA DERECHA -->
+  <text x="210" y="85" font-family="'Segoe UI', 'Montserrat', sans-serif" font-weight="900" font-size="42" letter-spacing="2" fill="#FFFFFF">
+    LAWEBDE<tspan fill="#EA580C">TUMARCA</tspan>
+  </text>
+  
+  <text x="212" y="122" font-family="'Segoe UI', 'Montserrat', sans-serif" font-weight="600" font-size="16" letter-spacing="4" fill="#94A3B8">
+    SOLUCIONES DIGITALES &amp; BRANDING
+  </text>
+</svg>
