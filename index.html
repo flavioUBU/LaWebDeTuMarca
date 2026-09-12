@@ -3,34 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Web de tu Marca - Soluciones Digitales</title>
-    <!-- Ruta relativa para GitHub Pages y servidor estático -->
-    <link rel="stylesheet" href="css/style.css">
+    <title>La Web de tu Marca | Presencia Digital Profesional</title>
+    <!-- Ruta relativa compatible con GitHub Pages y servidores locales -->
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
 
-<!-- NAVBAR -->
-<header class="navbar">
-    <div class="container">
-        <div class="nav-flex">
-            <a href="#" class="logo-link">
-                <img src="images/logoHorizontal.svg" alt="La Web de tu Marca" class="logo-img">
+    <!-- NAVBAR FIJO -->
+    <header class="navbar">
+        <div class="container nav-flex">
+            <a href="#">
+                <img src="./images/logoHorizontal.svg" alt="La Web de tu Marca" class="logo-img">
             </a>
-            <nav>
-                <a href="#">Inicio</a>
-                <a href="#por-que">Por qué elegirnos</a>
+
+            <!-- Botón Hamburguesa Móvil -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                ☰
+            </button>
+
+            <!-- Menú de navegación -->
+            <nav id="navMenu">
+                <a href="#inicio">Inicio</a>
+                <a href="#por-que-elegirnos">Por qué elegirnos</a>
                 <a href="#soluciones">Soluciones y tarifas</a>
                 <a href="#comparativa">Comparativa de Planes</a>
                 <a href="#contacto" class="btn btn-primary nav-btn">Solicitar propuesta</a>
             </nav>
         </div>
-    </div>
-</header>
+    </header>
 
-<!-- HERO SECTION -->
-<section class="hero">
-    <div class="container">
-        <div class="hero-grid">
+    <!-- HERO SECTION -->
+    <section id="inicio" class="hero">
+        <div class="container hero-grid">
             <div class="hero-text-col">
                 <span class="pill">Presencia digital transparente y competitiva</span>
                 <h1>Presencia web profesional para tu negocio sin inversiones desproporcionadas</h1>
@@ -42,180 +46,201 @@
             </div>
             <div class="hero-img-col">
                 <div class="hero-image-wrapper">
-                    <img src="images/hero-bar.jpg" alt="Presencia Web Profesional">
+                    <img src="./images/hero-bar.jpg" alt="Diseño Web Profesional">
                     <div class="floating-badge">
-                        <span class="dot"></span> Disponible ahora
+                        <span class="dot"></span> Disponible para nuevos proyectos
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- POR QUÉ ELEGIRNOS -->
-<section id="por-que" class="about-section about-section-bg">
-    <div class="container">
-        <div class="about-header">
-            <span class="pill">¿Por qué elegirnos?</span>
-            <h2 class="section-title">Tu negocio merece una web a la altura</h2>
-            <p class="section-subtitle">Diseño adaptado a dispositivos móviles, optimizado para conversión y sin cuotas ocultas.</p>
-        </div>
-        <div class="about-grid">
-            <div class="about-card">
-                <div class="card-icon">⚡</div>
-                <h3>Entrega Rápida</h3>
-                <p>Tu sitio web listo y funcionando en tiempo récord para que no pierdas oportunidades de negocio.</p>
+    <!-- POR QUÉ ELEGIRNOS -->
+    <section id="por-que-elegirnos" class="about-section about-section-bg">
+        <div class="container">
+            <div class="about-header">
+                <span class="pill">Tu negocio merece una web a la altura</span>
+                <h2 class="section-title">¿Por qué trabajar con nosotros?</h2>
+                <p class="section-subtitle">Diseños modernos, rápidos y adaptados a cualquier dispositivo para convertir visitantes en clientes.</p>
             </div>
-            <div class="about-card">
-                <div class="card-icon">📱</div>
-                <h3>100% Mobile First</h3>
-                <p>Diseñado específicamente para verse perfecto en teléfonos móviles y tablets.</p>
-            </div>
-            <div class="about-card">
-                <div class="card-icon">📞</div>
-                <h3>Contacto Directo</h3>
-                <p>Acceso inmediato para tus clientes mediante llamadas telefónicas, correo o WhatsApp.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- SOLUCIONES Y TARIFAS -->
-<section id="soluciones" class="pricing-section">
-    <div class="container">
-        <div class="pricing-header">
-            <span class="pill">Soluciones y tarifas</span>
-            <h2 class="section-title">Planes adaptados a tu negocio</h2>
-        </div>
-        <div class="pricing-grid">
-
-            <!-- TARJETA 1: PLAN BÁSICO -->
-            <div class="card">
-                <div class="card-image-header">
-                    <img src="images/hero-bar.jpg" alt="Plan Carta Digital">
-                    <span class="card-tag">CARTA / MENÚ QR</span>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="card-icon">⚡</div>
+                    <h3>Carga Ultrarrápida</h3>
+                    <p>Webs optimizadas al máximo para ofrecer la mejor experiencia de usuario y mejorar el posicionamiento SEO.</p>
                 </div>
-                <div class="card-body">
-                    <h3>Plan Carta / Menú QR</h3>
-                    <p>Diseñado exclusivamente para hostelería y locales que necesitan mostrar su menú o datos básicos mediante QR.</p>
-                    <div class="price-box">
-                        <span style="text-decoration: line-through; color: var(--text-muted); font-size: 0.85rem;">Antes: 350€</span>
-                        <div class="price-amount">199€ <small style="font-size:0.8rem; font-weight:normal; color:var(--accent-orange);">(Pago único + imp.)</small></div>
+                <div class="about-card">
+                    <div class="card-icon">📱</div>
+                    <h3>100% Responsive</h3>
+                    <p>Adaptado perfectamente a móviles, tablets y ordenadores para no perder ninguna oportunidad de venta.</p>
+                </div>
+                <div class="about-card">
+                    <div class="card-icon">🎯</div>
+                    <h3>Enfocado a Conversión</h3>
+                    <p>Estructura pensada para guiar al usuario a contactar, llamar o pedir presupuesto fácilmente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOLUCIONES Y TARIFAS -->
+    <section id="soluciones" class="pricing-section">
+        <div class="container">
+            <div class="pricing-header">
+                <span class="pill">Precios transparentes</span>
+                <h2 class="section-title">Soluciones y Tarifas</h2>
+                <p class="section-subtitle">Elige el plan que mejor se adapte a las necesidades actuales de tu proyecto.</p>
+            </div>
+            <div class="pricing-grid">
+                
+                <!-- Plan Esencial -->
+                <div class="card">
+                    <div class="card-image-header">
+                        <img src="./images/plan-basic.jpg" alt="Plan Presencia Esencial">
+                        <span class="card-tag">Básico</span>
                     </div>
-                    <ul class="features-list">
-                        <li>✓ Menú o catálogo digital interactivo (1 página)</li>
-                        <li>✓ Código QR personalizado listo para imprimir</li>
-                        <li>✓ Botones de llamada directa, WhatsApp o email</li>
-                        <li>✓ Visualización rápida en teléfonos móviles</li>
-                    </ul>
-                </div>
-                <div class="card-footer">
-                    <a href="#contacto" class="btn btn-secondary full-width">Solicitar propuesta</a>
-                </div>
-            </div>
-
-            <!-- TARJETA 2: PLAN IMPULSO -->
-            <div class="card pricing-card-featured">
-                <div class="card-image-header">
-                    <img src="images/comparativaFondo.jpg" alt="Plan Web Corporativa">
-                    <span class="card-tag tag-featured">🔥 MÁS POPULAR</span>
-                </div>
-                <div class="card-body">
-                    <h3>Plan Web Corporativa</h3>
-                    <p>La solución completa para pymes y profesionales que necesitan un sitio web corporativo completo para posicionar y vender.</p>
-                    <div class="price-box">
-                        <span style="text-decoration: line-through; color: var(--text-muted); font-size: 0.85rem;">Antes: 600€</span>
-                        <div class="price-amount">349€ <small style="font-size:0.8rem; font-weight:normal; color:var(--accent-orange);">(Pago único + imp.)</small></div>
+                    <div class="card-body">
+                        <h3>Presencia Esencial</h3>
+                        <p>Ideal para negocios que necesitan estar en internet con una imagen profesional y directa.</p>
+                        <div class="price-box">
+                            <span class="price-amount">Consultar</span>
+                        </div>
+                        <ul class="features-list">
+                            <li>✓ Landing Page One-Page o Carta Digital</li>
+                            <li>✓ Diseño adaptado a móviles</li>
+                            <li>✓ Botón directo a WhatsApp y llamadas</li>
+                            <li>✓ Formulario de contacto directo</li>
+                            <li>✓ Optimización de velocidad</li>
+                        </ul>
                     </div>
-                    <ul class="features-list">
-                        <li>✓ Sitio web corporativo completo (Múltiples secciones)</li>
-                        <li>✓ Presentación de Servicios, Sobre Nosotros y Contacto</li>
-                        <li>✓ Integración de llamadas, formularios y WhatsApp</li>
-                        <li>✓ Optimización SEO para aparecer en Google</li>
-                    </ul>
+                    <div class="card-footer">
+                        <a href="#contacto" class="btn btn-secondary full-width">Solicitar Información</a>
+                    </div>
                 </div>
-                <div class="card-footer">
-                    <a href="#contacto" class="btn btn-primary full-width">Solicitar propuesta</a>
+
+                <!-- Plan Impulso Pro -->
+                <div class="card pricing-card-featured">
+                    <div class="card-image-header">
+                        <img src="./images/plan-pro.jpg" alt="Plan Impulso Profesional">
+                        <span class="card-tag tag-featured">Recomendado</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Impulso Profesional</h3>
+                        <p>Perfecto para empresas que buscan posicionar múltiples servicios y captar más clientes en Google.</p>
+                        <div class="price-box">
+                            <span class="price-amount">Consultar</span>
+                        </div>
+                        <ul class="features-list">
+                            <li>✓ Sitio Web Multisección completo</li>
+                            <li>✓ Optimización SEO Inicial en Google</li>
+                            <li>✓ Integración con Google Maps / My Business</li>
+                            <li>✓ Diseño personalizado y exclusivo</li>
+                            <li>✓ Formulario de presupuesto avanzado</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#contacto" class="btn btn-primary full-width">Empezar Ahora</a>
+                    </div>
                 </div>
+
             </div>
-
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- COMPARATIVA EN DETALLE POR PLAN -->
-<section id="comparativa" class="about-section comparativa-section-bg">
-    <div class="container">
-        <div class="about-header">
-            <span class="pill">Detalle de Servicios</span>
-            <h2 class="section-title">¿Qué diferencia a cada plan?</h2>
-            <p class="section-subtitle">Asegúrate de elegir el servicio exacto que necesita tu proyecto.</p>
-        </div>
-
-        <div class="plans-comparison-grid">
-
-            <!-- APARTADO PLAN BÁSICO -->
-            <div class="plan-detail-card">
-                <div class="plan-detail-header">
-                    <span class="plan-badge badge-basic">PLAN BÁSICO</span>
-                    <h3>Carta Digital / Menú QR</h3>
-                    <div class="plan-target">🎯 <strong>Ideal para:</strong> Bares, restaurantes, cafeterías o negocios que solo buscan sustituir su carta física por un QR o mostrar datos básicos de contacto.</div>
-                </div>
-                <div class="plan-detail-body">
+    <!-- COMPARATIVA DE PLANES -->
+    <section id="comparativa" class="about-section comparativa-section-bg">
+        <div class="container">
+            <div class="about-header">
+                <span class="pill">Tabla comparativa</span>
+                <h2 class="section-title">¿Qué diferencia a cada plan?</h2>
+                <p class="section-subtitle">Compara las características detalladas de cada opción para tomar la mejor decisión.</p>
+            </div>
+            <div class="plans-comparison-grid">
+                
+                <div class="plan-detail-card">
+                    <span class="plan-badge badge-basic">PLAN ESENCIAL</span>
+                    <div class="plan-detail-header">
+                        <h3>Presencia Esencial</h3>
+                    </div>
+                    <p class="plan-target">Para negocios locales, autónomos o cartas digitales sencillas.</p>
                     <ul class="check-list">
-                        <li class="included"><span>✓</span> Carta/Menú digital interactivo de lectura rápida</li>
-                        <li class="included"><span>✓</span> Código QR generado listo para mesas o escaparates</li>
-                        <li class="included"><span>✓</span> Botones directos para llamar, escribir por email o WhatsApp</li>
-                        <li class="included"><span>✓</span> Carga ultrarrápida optimizada para teléfonos</li>
-                        <li class="excluded"><span>✕</span> No incluye secciones corporativas (Servicios, Historia, Equipo)</li>
-                        <li class="excluded"><span>✕</span> No incluye SEO avanzado para posicionar palabras clave en Google</li>
+                        <li class="included"><span>✓</span> Página única interactiva (One Page)</li>
+                        <li class="included"><span>✓</span> Adaptación móvil y tablet</li>
+                        <li class="included"><span>✓</span> Enlace a redes sociales</li>
+                        <li class="included"><span>✓</span> Formulario de contacto simple</li>
+                        <li class="excluded"><span>✕</span> Múltiples páginas de servicios</li>
+                        <li class="excluded"><span>✕</span> SEO estructurado avanzado</li>
                     </ul>
                 </div>
-            </div>
 
-            <!-- APARTADO PLAN IMPULSO -->
-            <div class="plan-detail-card featured-detail-card">
-                <div class="plan-detail-header">
-                    <span class="plan-badge badge-impulso">PLAN COMPLETO</span>
-                    <h3>Web Corporativa Impulso</h3>
-                    <div class="plan-target">🎯 <strong>Ideal para:</strong> Empresas, pymes, clínicas o profesionales que necesitan transmitir confianza, explicar todos sus servicios e captar clientes en Google.</div>
-                </div>
-                <div class="plan-detail-body">
+                <div class="plan-detail-card featured-detail-card">
+                    <span class="plan-badge badge-impulso">PLAN IMPULSO PRO</span>
+                    <div class="plan-detail-header">
+                        <h3>Impulso Profesional</h3>
+                    </div>
+                    <p class="plan-target">Para pymes y empresas que quieren destacar sobre la competencia.</p>
                     <ul class="check-list">
-                        <li class="included"><span>✓</span> Sitio web corporativo multisección completo</li>
-                        <li class="included"><span>✓</span> Módulos detallados de Servicios, Presentación y Contacto</li>
-                        <li class="included"><span>✓</span> Canales de contacto configurables (Llamadas directas, formulario, WhatsApp, email)</li>
-                        <li class="included"><span>✓</span> Optimización SEO para aparecer en búsquedas de Google</li>
-                        <li class="included"><span>✓</span> Diseño 100% personalizado adaptado a tu identidad visual</li>
-                        <li class="included"><span>✓</span> Integración de mapa interactivo y ubicación de negocio</li>
+                        <li class="included"><span>✓</span> Web multipágina completa</li>
+                        <li class="included"><span>✓</span> Adaptación móvil y tablet superior</li>
+                        <li class="included"><span>✓</span> Integración Google Maps y Reseñas</li>
+                        <li class="included"><span>✓</span> Formularios de presupuesto personalizados</li>
+                        <li class="included"><span>✓</span> Estrategia de palabras clave SEO</li>
+                        <li class="included"><span>✓</span> Soporte prioritario</li>
                     </ul>
                 </div>
+
             </div>
-
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- CONTACTO -->
-<section id="contacto" class="contact-section">
-    <div class="container">
-        <h2 class="section-title">Solicita tu propuesta sin compromiso</h2>
-        <p class="section-subtitle">Déjanos tus datos y te contactaremos en menos de 24 horas.</p>
-        <form onsubmit="event.preventDefault(); alert('Formulario enviado correctamente');">
-            <input type="text" placeholder="Tu Nombre" required>
-            <input type="email" placeholder="Correo Electrónico" required>
-            <input type="tel" placeholder="Teléfono / WhatsApp" required>
-            <textarea rows="4" placeholder="Cuéntanos sobre tu proyecto"></textarea>
-            <button type="submit" class="btn btn-primary full-width btn-lg">Enviar consulta</button>
-        </form>
-    </div>
-</section>
+    <!-- CONTACTO -->
+    <section id="contacto" class="contact-section">
+        <div class="container">
+            <span class="pill">Hablemos de tu proyecto</span>
+            <h2 class="section-title">Solicita tu propuesta sin compromiso</h2>
+            <p class="section-subtitle">Cuéntanos tu idea o negocio y te responderemos en menos de 24 horas.</p>
 
-<footer>
-    <div class="container">
-        <p>&copy; 2026 La Web de tu Marca. Todos los derechos reservados.</p>
-    </div>
-</footer>
+            <form action="#" method="POST">
+                <label for="nombre">Nombre o Empresa</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre o el de tu negocio" required>
 
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+
+                <label for="telefono">Teléfono de contacto</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="600 000 000">
+
+                <label for="mensaje">¿En qué podemos ayudarte?</label>
+                <textarea id="mensaje" name="mensaje" rows="4" placeholder="Explícanos brevemente tu proyecto o dudas..." required></textarea>
+
+                <button type="submit" class="btn btn-primary full-width btn-lg">Enviar Solicitud</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 La Web de tu Marca. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- SCRIPT PARA EL MENÚ HAMBURGUESA EN MÓVIL -->
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            menuToggle.textContent = navMenu.classList.contains('active') ? '✕' : '☰';
+        });
+
+        document.querySelectorAll('#navMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                menuToggle.textContent = '☰';
+            });
+        });
+    </script>
 </body>
 </html>
