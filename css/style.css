@@ -17,6 +17,11 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
 html, body {
     width: 100%;
     max-width: 100vw;
@@ -42,13 +47,15 @@ img {
 }
 
 /* ==========================================================================
-   2. NAVBAR
+   2. NAVBAR FIJO
    ========================================================================== */
 .navbar {
     background-color: rgba(11, 17, 32, 0.95);
     backdrop-filter: blur(10px);
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 1000;
     border-bottom: 1px solid var(--border-color);
     padding: 0.75rem 0;
@@ -64,8 +71,21 @@ img {
 }
 
 .logo-img {
-    height: 36px;
+    height: 38px;
     width: auto;
+    display: block;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+    font-size: 1.5rem;
+    padding: 0.25rem 0.65rem;
+    border-radius: 6px;
+    cursor: pointer;
+    line-height: 1;
 }
 
 nav {
@@ -85,7 +105,6 @@ nav a:hover {
     color: var(--text-main);
 }
 
-/* BOTONES */
 .btn {
     display: inline-block;
     padding: 0.65rem 1.25rem;
@@ -132,7 +151,8 @@ nav a:hover {
    3. HERO SECTION
    ========================================================================== */
 .hero {
-    padding: 3rem 0;
+    padding-top: 100px;
+    padding-bottom: 3rem;
     width: 100%;
 }
 
@@ -230,7 +250,7 @@ nav a:hover {
 }
 
 /* ==========================================================================
-   4. SECCIONES Y FONDOS DE IMAGEN
+   4. SECCIONES Y FONDOS
    ========================================================================== */
 .about-section, .pricing-section {
     padding: 3.5rem 0;
@@ -238,16 +258,20 @@ nav a:hover {
     position: relative;
 }
 
-/* Fondo para "Tu negocio merece una web a la altura" */
 .about-section-bg {
-    background: linear-gradient(rgba(11, 17, 32, 0.88), rgba(11, 17, 32, 0.92)),
-    url('/images/hero-bar.jpg') center/cover no-repeat;
+    background-color: #0f172a;
+    background-image: linear-gradient(rgba(11, 17, 32, 0.88), rgba(11, 17, 32, 0.92)), url('../images/hero-bar.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-/* Fondo para "¿Qué diferencia a cada plan?" */
 .comparativa-section-bg {
-    background: linear-gradient(rgba(11, 17, 32, 0.88), rgba(11, 17, 32, 0.92)),
-    url('/images/comparativaFondo.jpg') center/cover no-repeat;
+    background-color: #0f172a;
+    background-image: linear-gradient(rgba(11, 17, 32, 0.88), rgba(11, 17, 32, 0.92)), url('../images/comparativaFondo.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .about-header, .pricing-header {
@@ -287,7 +311,6 @@ nav a:hover {
     margin-bottom: 0.75rem;
 }
 
-/* TARIFAS */
 .pricing-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -369,7 +392,7 @@ nav a:hover {
 }
 
 /* ==========================================================================
-   5. COMPARATIVA POR APARTADOS (DESGLOSE CLARO DE PLANES)
+   5. COMPARATIVA
    ========================================================================== */
 .plans-comparison-grid {
     display: grid;
@@ -466,13 +489,6 @@ nav a:hover {
     text-align: center;
 }
 
-.contact-section .section-title,
-.contact-section .section-subtitle {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 form {
     max-width: 550px;
     width: 100%;
@@ -484,6 +500,13 @@ form {
     text-align: left;
 }
 
+label {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 0.35rem;
+}
+
 input, textarea {
     width: 100%;
     padding: 0.75rem;
@@ -492,6 +515,7 @@ input, textarea {
     border: 1px solid var(--border-color);
     background-color: var(--bg-dark);
     color: var(--text-main);
+    font-family: inherit;
 }
 
 footer {
@@ -503,39 +527,51 @@ footer {
 }
 
 /* ==========================================================================
-   7. REGLAS RESPONSIVE (MÓVIL)
+   7. REGLAS RESPONSIVE (MÓVIL CON MENÚ HAMBURGUESA)
    ========================================================================== */
 @media screen and (max-width: 768px) {
 
-    .nav-flex {
-        flex-direction: column !important;
-        align-items: center !important;
-        gap: 0.75rem !important;
+    html {
+        scroll-padding-top: 70px;
+    }
+
+    .menu-toggle {
+        display: block;
     }
 
     nav {
-        flex-direction: column !important;
-        width: 100% !important;
-        gap: 0.4rem !important;
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: rgba(11, 17, 32, 0.98);
+        border-bottom: 1px solid var(--border-color);
+        padding: 1rem;
+        gap: 0.75rem;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+    }
+
+    nav.active {
+        display: flex;
     }
 
     nav a {
-        width: 100% !important;
-        text-align: center !important;
-        padding: 0.35rem 0 !important;
-        font-size: 0.85rem !important;
-        white-space: normal !important;
-        word-break: break-word !important;
+        width: 100%;
+        text-align: center;
+        padding: 0.5rem 0;
+        font-size: 0.95rem;
     }
 
     .nav-btn {
-        width: 100% !important;
-        max-width: 280px !important;
-        margin-top: 0.25rem !important;
+        width: 100%;
+        margin-top: 0.25rem;
     }
 
     .hero {
-        padding: 1.5rem 0;
+        padding-top: 80px;
+        padding-bottom: 2rem;
     }
 
     .hero-grid {
@@ -572,15 +608,7 @@ footer {
         font-size: 1.35rem;
     }
 
-    .about-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .pricing-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .plans-comparison-grid {
+    .about-grid, .pricing-grid, .plans-comparison-grid {
         grid-template-columns: 1fr;
     }
 
