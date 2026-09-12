@@ -412,10 +412,22 @@ section {
     margin-bottom: 20px;
     border-bottom: 1px solid var(--border-color);
     padding-bottom: 15px;
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+}
+
+.price-old {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #cbd5e1;
+    text-decoration: line-through;
+    text-decoration-color: #ef4444;
+    text-decoration-thickness: 2px;
 }
 
 .price-amount {
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 800;
     color: var(--primary);
 }
@@ -572,7 +584,6 @@ form input:focus, form textarea:focus {
 /* ==========================================
    BOTÓN FLOTANTE DE LLAMADA DIRECTA (SOLO MÓVIL)
    ========================================== */
-/* Oculto por defecto en escritorio */
 .btn-call-float {
     display: none;
 }
