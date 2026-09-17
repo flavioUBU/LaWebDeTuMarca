@@ -1,10 +1,34 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Web de tu Marca | Presencia Digital Profesional</title>
-    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- MEJORA SEO: Metadescripción optimizada -->
+    <meta name="description" content="Diseño web profesional para pymes y autónomos, landing pages y cartas digitales en tiempo récord. Posiciona tu negocio en Google y aumenta tus ventas.">
+    
+    <!-- MEJORA SEO: Open Graph para Redes Sociales y WhatsApp -->
+    <meta property="og:title" content="La Web de tu Marca | Presencia Digital Profesional">
+    <meta property="og:description" content="Diseño web profesional, páginas corporativas y cartas digitales interactivas con presupuestos claros y ajustados.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_ES">
+
+    <!-- MEJORA SEO: Datos Estructurados (Schema.org) para Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "La Web de tu Marca",
+      "description": "Desarrollo de sitios web corporativos, landing pages y cartas digitales interactivas para negocios y autónomos.",
+      "telephone": "+34615407964",
+      "priceRange": "€€",
+      "areaServed": "España",
+      "serviceType": ["Diseño Web", "Desarrollo Front-end", "SEO Local", "Cartas Digitales"]
+    }
+    </script>
+
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 
@@ -12,7 +36,7 @@
 <header class="navbar">
     <div class="container nav-flex">
         <a href="#">
-            <img src="images/logoHorizontal.svg" alt="La Web de tu Marca" class="logo-img">
+            <img src="/images/logoHorizontal.svg" alt="La Web de tu Marca" class="logo-img">
         </a>
 
         <!-- Botón Hamburguesa Móvil -->
@@ -46,7 +70,7 @@
         </div>
         <div class="hero-img-col">
             <div class="hero-image-wrapper">
-                <img src="images/hero-bar.jpg" alt="Diseño Web Profesional">
+                <img src="/images/hero-bar.jpg" alt="Diseño Web Profesional">
                 <div class="floating-badge">
                     <span class="dot"></span> Disponible para nuevos proyectos
                 </div>
@@ -96,7 +120,7 @@
             <!-- Plan Esencial -->
             <div class="card">
                 <div class="card-image-header">
-                    <img src="images/qr-cafe.jpg" alt="Plan Presencia Esencial">
+                    <img src="/images/qr-cafe.jpg" alt="Plan Presencia Esencial">
                     <span class="card-tag">Básico</span>
                 </div>
                 <div class="card-body">
@@ -122,7 +146,7 @@
             <!-- Plan Impulso Pro -->
             <div class="card pricing-card-featured">
                 <div class="card-image-header">
-                    <img src="images/web-local.jpg" alt="Plan Impulso Profesional">
+                    <img src="/images/web-local.jpg" alt="Plan Impulso Profesional">
                     <span class="card-tag tag-featured">Recomendado</span>
                 </div>
                 <div class="card-body">
@@ -210,7 +234,7 @@
             <!-- Tarjeta 1: Casa El Repique -->
             <div class="project-card">
                 <div class="project-img-wrapper">
-                    <img src="images/Repique.jpg" alt="Casa El Repique - Demo Carta QR">
+                    <img src="/images/Repique.jpg" alt="Casa El Repique - Demo Carta QR">
                     <span class="project-tag">Demo - Hostelería</span>
                 </div>
                 <div class="project-body">
@@ -233,7 +257,7 @@
             <!-- Tarjeta 2: Barbería El Callejón -->
             <div class="project-card">
                 <div class="project-img-wrapper">
-                    <img src="images/Callej.jpg" alt="Barbería El Callejón - Demo Web">
+                    <img src="/images/Callej.jpg" alt="Barbería El Callejón - Demo Web">
                     <span class="project-tag">Demo - Barbería</span>
                 </div>
                 <div class="project-body">
@@ -256,7 +280,7 @@
             <!-- Tarjeta 3: Instalaciones Eléctricas Pulido -->
             <div class="project-card">
                 <div class="project-img-wrapper">
-                    <img src="images/ElectricidadPulido.jpg" alt="Instalaciones Eléctricas Pulido - Demo Web Electricistas">
+                    <img src="/images/ElectricidadPulido.jpg" alt="Instalaciones Eléctricas Pulido - Demo Web Electricistas">
                     <span class="project-tag">Demo - Servicios</span>
                 </div>
                 <div class="project-body">
@@ -327,6 +351,6 @@
 </a>
 
 <!-- Enlace al archivo JS externo -->
-<script src="js/main.js"></script>
+<script src="/js/main.js"></script>
 </body>
 </html>
