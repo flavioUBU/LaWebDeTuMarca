@@ -268,11 +268,11 @@ section {
 }
 
 /* ==========================================
-   SECCIÓN POR QUÉ ELEGIRNOS (FONDO 1)
+   SECCIÓN POR QUÉ ELEGIRNOS
    ========================================== */
 .about-section-bg {
     background-color: #0f172a;
-    background-image: linear-gradient(rgba(11, 17, 32, 0.88), rgba(11, 17, 32, 0.92)), url('../images/nosotrosFondo.jpg');
+    background-image: linear-gradient(rgba(11, 17, 32, 0.88), rgba(11, 17, 32, 0.92)), url('/images/nosotrosFondo.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -355,6 +355,16 @@ section {
 .pricing-card-featured {
     border: 2px solid var(--accent);
     position: relative;
+    transition: var(--transition);
+}
+
+.pricing-card-featured:hover {
+    border-color: var(--primary);
+}
+
+.pricing-card-featured:hover .tag-featured {
+    background-color: var(--primary);
+    color: #0f172a;
 }
 
 .card-image-header {
@@ -390,6 +400,7 @@ section {
 .tag-featured {
     background: var(--accent);
     color: #ffffff;
+    transition: var(--transition);
 }
 
 .card-body {
@@ -447,11 +458,11 @@ section {
 }
 
 /* ==========================================
-   SECCIÓN COMPARATIVA (FONDO 2)
+   SECCIÓN COMPARATIVA
    ========================================== */
 .comparativa-section-bg {
     background-color: #0f172a;
-    background-image: linear-gradient(rgba(11, 17, 32, 0.88), rgba(11, 17, 32, 0.92)), url('../images/comparativaFondo.jpg');
+    background-image: linear-gradient(rgba(11, 17, 32, 0.88), rgba(11, 17, 32, 0.92)), url('/images/comparativaFondo.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -600,9 +611,122 @@ footer {
 }
 
 /* ==========================================
+   SECCIÓN NUESTROS PROYECTOS Y DEMOS
+   ========================================== */
+.projects-section {
+    background-color: var(--bg-main);
+}
+
+/* Ampliamos el contenedor específicamente para esta sección y asegurar espacio en PC */
+.projects-section .container {
+    max-width: 1450px !important;
+    width: 95% !important;
+}
+
+.projects-header {
+    text-align: center;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) !important; /* Fuerza estricta de 3 columnas en PC */
+    gap: 1.5rem !important; /* Espaciado optimizado para que entren sin saltar */
+    margin-top: 40px;
+}
+
+.project-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition);
+}
+
+.project-card:hover {
+    border-color: var(--border-highlight);
+    transform: translateY(-5px);
+    background: var(--bg-card-hover);
+}
+
+.project-img-wrapper {
+    position: relative;
+    height: 180px; /* Altura optimizada */
+    overflow: hidden;
+    background-color: #1e293b;
+}
+
+.project-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.project-card:hover .project-img-wrapper img {
+    transform: scale(1.05);
+}
+
+.project-tag {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--accent);
+    color: #ffffff;
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.project-body {
+    padding: 20px; /* Padding ajustado para ganar espacio horizontal y vertical */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-body h3 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+    color: var(--text-main);
+}
+
+.project-body p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    flex-grow: 1;
+    line-height: 1.5;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 15px;
+}
+
+.project-tech span {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    color: var(--primary);
+}
+
+.project-link-wrapper {
+    margin-top: auto;
+}
+
+/* ==========================================
    RESPONSIVE (MÓVILES Y TABLETS)
    ========================================== */
-@media (max-width: 768px) {
+@media (max-width: 968px) {
     .container {
         width: 100%;
         max-width: 100%;
@@ -682,6 +806,11 @@ footer {
 
     form {
         padding: 20px;
+    }
+
+    /* Forzar que en tablets y móviles la sección de proyectos baje a 1 sola columna */
+    .projects-grid {
+        grid-template-columns: 1fr !important;
     }
 
     /* Mostrar botón flotante únicamente en móviles */
